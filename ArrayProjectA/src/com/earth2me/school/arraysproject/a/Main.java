@@ -1,5 +1,7 @@
 package com.earth2me.school.arraysproject.a;
 
+import com.earth2me.school.arraysproject.Application;
+
 /**
  * Contains the main entry point for the application
  * 
@@ -28,5 +30,6 @@ public final class Main
 	 */
 	public static void main(String[] args)
 	{
+		Application.run(new Program());
 	}
 }
