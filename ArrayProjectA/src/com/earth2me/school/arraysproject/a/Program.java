@@ -36,25 +36,35 @@ final class Program implements IProgram
 		
 		// Perform calculations.
 		final double average = getAverage(set);
-		final double[] greater = getGreaterThan(set, average);
+		final Double[] greater = getGreaterThan(set, average);
 		
 		// Report the average.
 		Console.writeLine("Approximate Average: %.3f", average);
 		
-		// Report the numbers greater than the average.
-		Console.writeLine("Set Values Greater than Average:");
-		StringBuilder format = new StringBuilder();
-		List<Object> args = new ArrayList<Object>();
-		for (int i = 0; i < greater.length; i++)
+		// Report the numbers greater than the average:
 		{
-			if (i > 0)
+			Console.writeLine("Set Values Greater than Average:");
+			
+			// This will hold the string format; looks like "%f %f %f %f"
+			StringBuilder format = new StringBuilder();
+			
+			// Build the format.
+			for (int i = 0; i < greater.length; i++)
 			{
-				format.append(' ');
+				// Don't append a space to the first %f.
+				if (i > 0)
+				{
+					format.append(' ');
+				}
+				
+				// Floating-point format.
+				format.append("%f");
 			}
-			format.append("%f");
-			args.add(greater[i]);
+			
+			// This is why we needed the object array, not the primitive
+			// double array.
+			Console.writeLine(format.toString(), (Object[])greater);
 		}
-		Console.writeLine(format.toString(), args.toArray());
 	}
 
 	/**
@@ -88,7 +98,7 @@ final class Program implements IProgram
 	 *            returned array.
 	 * @return An array of all numbers exceeding the specified threshold.
 	 */
-	private final double[] getGreaterThan(final double[] set, final double threshold)
+	private final Double[] getGreaterThan(final double[] set, final double threshold)
 	{
 		// Find all the numbers in the set greater than the threshold.
 		List<Double> greater = new ArrayList<Double>();
@@ -99,17 +109,9 @@ final class Program implements IProgram
 				greater.add(set[i]);
 			}
 		}
-
-		// Convert the object list to a primitive array.
-		// List.toArray() would not work here; we would get an object array.
-		double[] primArray = new double[greater.size()];
-		for (int i = 0; i < primArray.length; i++)
-		{
-			primArray[i] = greater.get(i).doubleValue();
-		}
-
-		// Return the primitive array.
-		return primArray;
+		
+		// We'll need the object form later, not the primitive form.
+		return greater.toArray(new Double[0]);
 	}
 
 	/**
