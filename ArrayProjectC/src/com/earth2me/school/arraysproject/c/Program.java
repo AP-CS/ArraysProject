@@ -24,9 +24,9 @@ final class Program implements IProgram
 		final int rows = 5; // Must be less than 10.
 		final int columns = 4; // Must be less than 10.
 
-		// Initialize arrays to hold totals and our matrix of randoms numbers.
-		final int[] totalsX = new int[columns];
-		final int[] totalsY = new int[rows];
+		// Initialize arrays to hold totals and our matrix of random numbers.
+		final int[] totalsX = new int[rows];
+		final int[] totalsY = new int[columns];
 		final int[][] matrix = new int[rows][columns]; // Note it's [y][x]!
 
 		// Generate the data and calculate sums.
@@ -103,8 +103,8 @@ final class Program implements IProgram
 	 */
 	private static void generate(final int[][] matrix, final int[] totalsX, final int[] totalsY)
 	{
-		final int rows = totalsY.length;
-		final int columns = totalsX.length;
+		final int rows = totalsX.length;
+		final int columns = totalsY.length;
 
 		final Random random = new Random();
 
