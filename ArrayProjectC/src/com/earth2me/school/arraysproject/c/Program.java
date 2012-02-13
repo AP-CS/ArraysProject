@@ -1,6 +1,5 @@
 package com.earth2me.school.arraysproject.c;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 import com.earth2me.school.arraysproject.Console;
