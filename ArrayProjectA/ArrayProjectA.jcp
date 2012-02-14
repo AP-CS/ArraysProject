@@ -1,0 +1,29 @@
+! ** JCreator Project File (C)2000
+! ********** DO NOT EDIT *********
+
+VERSION := "1.10"
+LABEL := "ArrayProjectA"
+JDKPROFILE := "JDK version 1.7.0_02"
+ACTIVE := "1"
+OUTPUTPATH := "..\\\\ArrayProjectA"
+COMPILER := "<Default>"
+
+! Start RunTime Configuration Structure
+#[BeginRunTime]LABEL := "<Default>" RUNAPPLIC := "" RUNAPPLET := "" PARAM := "" RUN := "com.earth2me.school.arraysproject.a.Main" CHECK := "10" #[EndRunTime]
+! Start Required Libraries Structure
+#[BeginRLibrary]LABEL := "ArraysProjectLib" #[EndRLibrary]
+
+! Start Project Folder Structure
+#[BeginFolder]
+LABEL := "Root"
+FILTER := ""
+
+#[BeginFile]SOURCE := "..\\\\Compiling.txt" #[EndFile]
+#[BeginFolder]
+LABEL := "com.earth2me.school.arraysproject.a"
+FILTER := ""
+
+#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\a\\Main.java" #[EndFile]
+#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\a\\Program.java" #[EndFile]
+#[EndFolder]
+#[EndFolder]

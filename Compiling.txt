@@ -1,0 +1,17 @@
+The ArraysProject workspace contains three applications and one class library.  The applications depend on the class library.
+
+Unfortunately, JCreator does not support this sort of dependency configuration very well.  It seems to use absolute paths to the build output of the library.  Thus, you will need to manually configure the workspace before you can compile it.
+
+	1. Ensure there is an active project set.  It doesn't matter which project.
+	2. Go to the Project -> Project Settings... menu item.
+	3. Go to the Required Libraries tab.
+	4. Select the ArraysProjectLib library.
+	5. Click the Edit... button.
+	6. Ensure that there is a Classes directory and a Sources directory:
+		- The Classes directory should point to the root directory of the ArraysProjectLib project.
+		- The Sources directory should point to the src directory within the ArraysProjectLib project.
+	7. Confirm all dialogs.
+
+To compile the projects in the correct order, use a batch build.  This has already been configured correctly for you; you should be able to confirm all the dialogs without making any changes.  Simply choose Build -> Compile Batch... from the menu and click the Start button.
+
+After making a batch build, you can run each project by setting it as the active project and executing it individually by pressing F5.
