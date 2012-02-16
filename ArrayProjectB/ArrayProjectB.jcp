@@ -18,12 +18,21 @@ COMPILER := "<Default>"
 LABEL := "Root"
 FILTER := ""
 
-#[BeginFile]SOURCE := "..\\\\Compiling.txt" #[EndFile]
+#[BeginFolder]
+LABEL := "com.earth2me.school.arraysproject"
+FILTER := ""
+
+#[BeginFile]SOURCE := "..\\ArraysProjectLib\\src\\com\\earth2me\\school\\arraysproject\\IProgram.java" #[EndFile]
+#[BeginFile]SOURCE := "..\\ArraysProjectLib\\src\\com\\earth2me\\school\\arraysproject\\IInitializable.java" #[EndFile]
+#[BeginFile]SOURCE := "..\\ArraysProjectLib\\src\\com\\earth2me\\school\\arraysproject\\IDisposable.java" #[EndFile]
+#[BeginFile]SOURCE := "..\\ArraysProjectLib\\src\\com\\earth2me\\school\\arraysproject\\Console.java" #[EndFile]
+#[BeginFile]SOURCE := "..\\ArraysProjectLib\\src\\com\\earth2me\\school\\arraysproject\\Application.java" #[EndFile]
+#[EndFolder]
 #[BeginFolder]
 LABEL := "com.earth2me.school.arraysproject.b"
 FILTER := ""
 
-#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\b\\Main.java" #[EndFile]
 #[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\b\\Program.java" #[EndFile]
+#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\b\\Main.java" #[EndFile]
 #[EndFolder]
 #[EndFolder]

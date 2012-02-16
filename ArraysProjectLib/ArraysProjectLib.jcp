@@ -22,10 +22,10 @@ FILTER := ""
 LABEL := "com.earth2me.school.arraysproject"
 FILTER := ""
 
-#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\Application.java" #[EndFile]
-#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\IProgram.java" #[EndFile]
-#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\Console.java" #[EndFile]
-#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\IInitializable.java" #[EndFile]
 #[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\IDisposable.java" #[EndFile]
+#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\IInitializable.java" #[EndFile]
+#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\Console.java" #[EndFile]
+#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\IProgram.java" #[EndFile]
+#[BeginFile]SOURCE := "\\src\\com\\earth2me\\school\\arraysproject\\Application.java" #[EndFile]
 #[EndFolder]
 #[EndFolder]
