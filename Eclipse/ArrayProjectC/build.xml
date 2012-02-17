@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ArrayProjectC" default="default">
+	<description>
+    	Array project C.
+    </description>
+	<import file="../build-common.xml" />
+</project>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build-common" default="default">
+	<property name="dir.bin" location="bin" />
+	<property name="dir.libbin" location="../ArraysProjectLib/bin" />
+	<property name="dir.src" location="src" />
+	<property name="dir.global.src" location="../../Source/${ant.project.name}" />
+	<property name="dir.global.libsrc" location="../../Source/ArraysProjectLib" />
+	<property name="dir.precompiled" location="../../Precompiled" />
+	<property name="file.jar" location="${dir.precompiled}/${ant.project.name}.jar" />
+	<property name="file.manifest" location="manifest.mf" />
+	
+	<import file="dependencies.xml" />
+	
+	<target name="default" depends="dist,source" />
+
+	<target name="dist" depends="compile">
+		<jar destfile="${file.jar}" compress="true" basedir="${dir.bin}" manifest="${file.manifest}" />
+	</target>
+	
+	<target name="dependencies">
+		<antcall target="dependencies.${ant.project.name}" />
+	</target>
+
+	<target name="compile" depends="clean,dependencies">
+		<javac destdir="${dir.bin}" srcdir="${dir.src}" classpath="${dir.libbin}" includeantruntime="false" />
+	</target>
+
+	<target name="clean">
+		<delete dir="${dir.bin}" />
+		<mkdir dir="${dir.bin}" />
+		<delete dir="${dir.global.src}" />
+		<mkdir dir="${dir.global.src}" />
+		<delete file="${file.jar}" />
+		<mkdir dir="${dir.precompiled}" />
+	</target>
+	
+	<target name="source" depends="clean">
+		<copy flatten="true" todir="${dir.global.src}" includeemptydirs="false">
+			<fileset dir="${dir.src}" />
+		</copy>
+		<copy flatten="true" todir="${dir.global.src}" includeemptydirs="false">
+			<fileset dir="${dir.global.libsrc}" />
+		</copy>
+	</target>
+</project>

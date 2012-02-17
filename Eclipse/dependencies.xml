@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="dependencies" default="depend.all">
+	<dirname property="dependencies.basedir" file="${basedir}"/>
+	
+	<target name="dependencies.ArrayProjectA" depends="depend.ArraysProjectLib" />
+	<target name="depend.ArrayProjectA" depends="depend.ArraysProjectLib">
+		<ant dir="${dependencies.basedir}/ArrayProjectA" inheritAll="false" />
+	</target>
+	
+	<target name="dependencies.ArrayProjectB" depends="depend.ArraysProjectLib" />
+	<target name="depend.ArrayProjectB" depends="depend.ArraysProjectLib">
+		<ant dir="${dependencies.basedir}/ArrayProjectB" inheritAll="false" />
+	</target>
+	
+	<target name="dependencies.ArrayProjectC" depends="depend.ArraysProjectLib" />
+	<target name="depend.ArrayProjectC" depends="depend.ArraysProjectLib">
+		<ant dir="${dependencies.basedir}/ArrayProjectC" inheritAll="false" />
+	</target>
+	
+	<target name="dependencies.ArraysProjectLib" />
+	<target name="depend.ArraysProjectLib">
+		<ant dir="${dependencies.basedir}/ArraysProjectLib" inheritAll="false" />
+	</target>
+</project>

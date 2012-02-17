@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ArraysProjectLib" default="default">
+	<description>
+    	Array project library.
+    </description>
+	<import file="../build-common.xml" />
+</project>
