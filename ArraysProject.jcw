@@ -1,0 +1,15 @@
+! ** JCreator Workspace File (C)2000
+! ********** DO NOT EDIT *********
+
+VERSION := "1.00"
+LABEL := "ArraysProject"
+
+! Start Project Structure
+#[BeginProject]SOURCE := "\\ArrayProjectA\\ArrayProjectA.jcp" #[EndProject]
+#[BeginProject]SOURCE := "\\ArrayProjectB\\ArrayProjectB.jcp" #[EndProject]
+#[BeginProject]SOURCE := "\\ArrayProjectC\\ArrayProjectC.jcp" #[EndProject]
+
+! Start Last Document Structure
+
+! Start Breakpoint Structure
+
